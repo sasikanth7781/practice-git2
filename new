@@ -1,0 +1,8 @@
+Thatireddy Reddy - I have updated the endpoint and added an option policy_mode = update (default) or recreate. This helps in either recreating the policies from scratch or update the existing ones. Add a pop-up in UI on pressing AI Powered, with these 2 options. After updating the UI, please test both of these options a couple of times and check if these are working fine. Also, please share with me the new policies, on using recreate options, in order to check if stopwords/meaningless words are still coming in policies.
+ 
+curl -X POST 'http://localhost:8000/api/ai-categorize-zip/' \
+ -H "Authorization: Bearer <token>" \
+ -F "file=@/path/to/input.zip" \
+ -F "policy_mode=recreate" \
+ --output result.zip
+
